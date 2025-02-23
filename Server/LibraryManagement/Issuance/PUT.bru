@@ -1,0 +1,22 @@
+meta {
+  name: PUT
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://localhost:3000/issuances/31
+  body: json
+  auth: none
+}
+
+body:json {
+    {
+      "book_id": 5,
+      "issuance_date": "2025-02-13T10:51:14.097Z",
+      "issuance_member": 1,
+      "issued_by": "Librarian C",
+      "target_return_date": "2025-02-22T10:51:14.097Z",
+      "issuance_status": "Pending"
+    }
+}

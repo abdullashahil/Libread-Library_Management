@@ -1,0 +1,21 @@
+meta {
+  name: PUT
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://localhost:3000/books/1
+  body: json
+  auth: none
+}
+
+body:json {
+    {
+      "book_name": "The Hidden Lie",
+      "book_cat_id": 1,
+      "book_collection_id": 1,
+      "book_launch_date": "2025-01-15T03:30:00.000Z",
+      "book_publisher": "Publisher A"
+    }
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Post Member
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/members
+  body: json
+  auth: none
+}
+
+body:json {
+    {
+      "mem_name": "Aldcene",
+      "mem_phone": "1234567890",
+      "mem_email": "alidte@example.com"
+    }
+}

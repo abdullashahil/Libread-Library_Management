@@ -1,0 +1,22 @@
+meta {
+  name: Post
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:3000/books/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "book_name": "The Testing Chronicle",
+    "book_cat_id": 1,
+    "book_collection_id": 1,
+    "book_launch_date": "2025-02-15T10:30:00Z",
+    "book_publisher": "Test Publisher"
+  }
+  
+}

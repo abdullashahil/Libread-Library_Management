@@ -1,0 +1,19 @@
+meta {
+  name: PUT Member
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://localhost:3000/members/2
+  body: json
+  auth: none
+}
+
+body:json {
+    {
+      "mem_name": "Bob Smithyyyy",
+      "mem_phone": "9876543210",
+      "mem_email": "bob@example.com"
+    }
+}

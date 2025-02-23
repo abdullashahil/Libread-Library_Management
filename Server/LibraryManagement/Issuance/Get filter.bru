@@ -1,0 +1,22 @@
+meta {
+  name: Get filter
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://localhost:3000/issuances?status=pending&date=2025-02-29
+  body: json
+  auth: none
+}
+
+query {
+  status: pending
+  date: 2025-02-29
+}
+
+body:json {
+  {
+    
+  }
+}

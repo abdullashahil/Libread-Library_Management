@@ -1,0 +1,19 @@
+meta {
+  name: Delete Member
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://localhost:3000/members/13
+  body: json
+  auth: none
+}
+
+body:json {
+    {
+      "mem_name": "Bob Smithyyyy",
+      "mem_phone": "9876543210",
+      "mem_email": "bob@example.com"
+    }
+}
