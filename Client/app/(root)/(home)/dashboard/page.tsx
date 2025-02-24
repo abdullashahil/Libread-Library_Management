@@ -37,7 +37,7 @@ export default function Dashboard() {
         const token = localStorage.getItem("token");
 
         const res = await fetch(
-          `http://localhost:3000/issuances?status=${selectedStatus}&date=${selectedDate}`,
+          `https://libread-server.vercel.app/issuances?status=${selectedStatus}&date=${selectedDate}`,
           {
             headers: {
               "Content-Type": "application/json",

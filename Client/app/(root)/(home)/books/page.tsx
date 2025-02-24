@@ -36,7 +36,7 @@ export default function Books() {
       // Get token from localStorage (if user is logged in)
       const token = localStorage.getItem("token")
 
-      const res = await fetch("http://localhost:3000/books", {
+      const res = await fetch("https://libread-server.vercel.app/books", {
         headers: {
           "Content-Type": "application/json",
           Authorization: token ? `Bearer ${token}` : "",
