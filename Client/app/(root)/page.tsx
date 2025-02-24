@@ -23,7 +23,7 @@ export default function AuthPage({}: AuthProps) {
 
   return (
     <>
-      <Toaster richColors position="top-center"/>
+      <Toaster richColors position="top-center" />
 
       <header className="flex flex-col justify-between items-center border border-none">
         {/* Logo Section */}
@@ -61,10 +61,12 @@ export default function AuthPage({}: AuthProps) {
 function SignupForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false); // <-- loading state
   const router = useRouter(); 
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true); // Start loading
     try {
       const res = await fetch("https://libread-server.vercel.app/users/signup", {
         method: "POST",
@@ -72,12 +74,9 @@ function SignupForm() {
         body: JSON.stringify({ username, password }),
       });
       const data = await res.json();
-      console.log(data)
       if (res.ok && data.token) {
-        // Store token in localStorage
         localStorage.setItem("token", data.token);
         toast.success("Signed up successfully!");
-        // Redirect to dashboard
         router.push("/dashboard");
       } else {
         toast.error(data.error || data.message || "Signup failed");
@@ -85,6 +84,8 @@ function SignupForm() {
     } catch (err) {
       console.error("Signup error:", err);
       toast.error("Signup failed.");
+    } finally {
+      setIsLoading(false); // Stop loading
     }
   };
 
@@ -120,9 +121,14 @@ function SignupForm() {
 
       <button
         type="submit"
-        className="w-full bg-orange-600 text-white py-2 rounded hover:bg-orange-700 transition-colors"
+        disabled={isLoading}
+        className="w-full bg-orange-600 text-white py-2 rounded hover:bg-orange-700 transition-colors flex items-center justify-center"
       >
-        Sign Up
+        {isLoading ? (
+          <Spinner />
+        ) : (
+          "Sign Up"
+        )}
       </button>
     </form>
   );
@@ -131,10 +137,12 @@ function SignupForm() {
 function LoginForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const router = useRouter(); // useRouter hook
+  const [isLoading, setIsLoading] = useState(false); // <-- loading state
+  const router = useRouter();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true); // Start loading
     try {
       const res = await fetch("https://libread-server.vercel.app/users/login", {
         method: "POST",
@@ -143,10 +151,8 @@ function LoginForm() {
       });
       const data = await res.json();
       if (res.ok && data.token) {
-        // Store token in localStorage
         localStorage.setItem("token", data.token);
         toast.success("Logged in successfully!");
-        // Redirect to dashboard
         router.push("/dashboard");
       } else {
         toast.error(data.error || data.message || "Login failed");
@@ -154,6 +160,8 @@ function LoginForm() {
     } catch (err) {
       console.error("Login error:", err);
       toast.error("Login failed.");
+    } finally {
+      setIsLoading(false); // Stop loading
     }
   };
 
@@ -189,10 +197,44 @@ function LoginForm() {
 
       <button
         type="submit"
-        className="w-full bg-orange-600 text-white py-2 rounded hover:bg-orange-700 transition-colors"
+        disabled={isLoading}
+        className="w-full bg-orange-600 text-white py-2 rounded hover:bg-orange-700 transition-colors flex items-center justify-center"
       >
-        Log In
+        {isLoading ? (
+          <Spinner />
+        ) : (
+          "Log In"
+        )}
       </button>
     </form>
+  );
+}
+
+/**
+ * A simple spinner component
+ */
+function Spinner() {
+  return (
+    <svg
+      className="animate-spin h-5 w-5 text-white"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      aria-label="Loading..."
+    >
+      <circle
+        className="opacity-25"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="currentColor"
+        strokeWidth="4"
+      ></circle>
+      <path
+        className="opacity-75"
+        fill="currentColor"
+        d="M4 12a8 8 0 018-8v8H4z"
+      ></path>
+    </svg>
   );
 }
