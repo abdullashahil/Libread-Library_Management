@@ -5,11 +5,9 @@ import { Button } from "@/components/ui/button"
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
-import { useState } from "react"
 import { Book, Bookmark, ChevronRight, Heart, HelpCircle, Settings } from "lucide-react"
 
 export default function Page() {
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
