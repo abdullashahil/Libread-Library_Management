@@ -1,6 +1,6 @@
 import pg from "pg";
 import dotenv from "dotenv";
-import fs from "fs";
+// import fs from "fs";
 
 dotenv.config();
 
@@ -11,9 +11,9 @@ const db = new pg.Client({
     password: process.env.PG_PASSWORD,
     port: process.env.PG_PORT,
     ssl: {
-        rejectUnauthorized: false,
-        ca: fs.readFileSync("./ca.pem").toString(),
-    }
+        rejectUnauthorized: true,
+        ca: process.env.PG_SSL_CA,
+    },
 });
 
 db.connect()
