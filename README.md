@@ -3,7 +3,10 @@
 A simple library management system with CRUD operations and JWT-based user authentication.
 
 ## Deployed Link
-[Coming Soon](#)
+### 🔗 [Website](https://libread-library-management.vercel.app/)
+
+### 🔗 [API link (JWT secured)](https://libread-server.vercel.app/)
+
 
 ## Tech Stack
 - **Frontend**: Next.js (TypeScript), Tailwind CSS
