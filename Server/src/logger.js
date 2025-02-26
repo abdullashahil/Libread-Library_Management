@@ -1,20 +1,21 @@
+// File based logging have been disabled for the production in Vercel
 import winston from "winston";
-import DailyRotateFile from "winston-daily-rotate-file";
-import fs from "fs";
-import path from "path";
+// import DailyRotateFile from "winston-daily-rotate-file";
+// import fs from "fs";
+// import path from "path";
 import dotenv from "dotenv";
-import { fileURLToPath } from "url";
+// import { fileURLToPath } from "url";
 
 dotenv.config();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
 // Log directory setup
-const logDirectory = process.env.LOG_DIR || path.join(__dirname, "..", "logs");
-if (!fs.existsSync(logDirectory)) {
-    fs.mkdirSync(logDirectory, { recursive: true });
-}
+// const logDirectory = process.env.LOG_DIR || path.join(__dirname, "..", "logs");
+// if (!fs.existsSync(logDirectory)) {
+//     fs.mkdirSync(logDirectory, { recursive: true });
+// }
 
 const uppercaseLevel = winston.format((info) => {
     info.level = info.level.toUpperCase(); // Convert level to uppercase
@@ -27,19 +28,19 @@ const logFormat = winston.format.printf(({ level, message, timestamp, functionNa
 });
 
 // Log transport with rotation
-const rotateFileTransport = new DailyRotateFile({
-    filename: path.join(logDirectory, "app-%DATE%.log"), //(e.g., app-2025-02-26.log)
-    datePattern: "YYYY-MM-DD",
-    maxSize: "10m",
-    maxFiles: "14d",
-    format: winston.format.combine(
-        uppercaseLevel(), // Capitalize log levels
-        winston.format.timestamp({ format: "YYYY-MM-DD HH:mm:ss" }),
-        winston.format.json()
-    ),
-});
+// const rotateFileTransport = new DailyRotateFile({
+//     filename: path.join(logDirectory, "app-%DATE%.log"), //(e.g., app-2025-02-26.log)
+//     datePattern: "YYYY-MM-DD",
+//     maxSize: "10m",
+//     maxFiles: "14d",
+//     format: winston.format.combine(
+//         uppercaseLevel(), // Capitalize log levels
+//         winston.format.timestamp({ format: "YYYY-MM-DD HH:mm:ss" }),
+//         winston.format.json()
+//     ),
+// });
 
-// Console format (with colors)
+// Console format
 const consoleFormat = winston.format.combine(
     uppercaseLevel(),
     winston.format.colorize(),
