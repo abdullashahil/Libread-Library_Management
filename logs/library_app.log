@@ -1,0 +1,687 @@
+[2025-02-26 12:52:19] [INFO] [serverStart] - Server is starting...
+[2025-02-26 12:56:14] [INFO] [ServerStart] - Server is running on http://localhost:3000
+[2025-02-26 12:56:19] [INFO] [serverStart] - Server is starting...
+[2025-02-26 12:56:22] [INFO] [ServerStart] - Server is running on http://localhost:3000
+[2025-02-26 12:57:26] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 12:57:39] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 12:59:15] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS member (
+    mem_id SERIAL PRIMARY KEY,
+    mem_name VARCHAR,
+    mem_phone VARCHAR,
+    mem_email VARCHAR
+  );
+
+[2025-02-26 12:59:16] [INFO] [database] - ✅ Connected to Aiven PostgreSQL
+[2025-02-26 12:59:16] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS membership (
+    membership_id SERIAL PRIMARY KEY,
+    member_id INTEGER,
+    status VARCHAR,
+    FOREIGN KEY (member_id) REFERENCES member(mem_id)
+  );
+
+[2025-02-26 12:59:16] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS collection (
+    collection_id SERIAL PRIMARY KEY,
+    collection_name VARCHAR
+  );
+
+[2025-02-26 12:59:16] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS category (
+    cat_id SERIAL PRIMARY KEY,
+    cat_name VARCHAR,
+    sub_cat_name VARCHAR
+  );
+
+[2025-02-26 12:59:16] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS book (
+    book_id SERIAL PRIMARY KEY,
+    book_name VARCHAR,
+    book_cat_id INTEGER,
+    book_collection_id INTEGER,    
+    book_launch_date TIMESTAMP,
+    book_publisher VARCHAR,
+    FOREIGN KEY (book_cat_id) REFERENCES category(cat_id),
+    FOREIGN KEY (book_collection_id) REFERENCES collection(collection_id)
+  );
+
+[2025-02-26 12:59:16] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS issuance (
+    issuance_id SERIAL PRIMARY KEY,
+    book_id INTEGER,
+    issuance_date TIMESTAMP,
+    issuance_member INTEGER,
+    issued_by VARCHAR,
+    target_return_date TIMESTAMP,
+    issuance_status VARCHAR,
+    FOREIGN KEY (book_id) REFERENCES book(book_id),
+    FOREIGN KEY (issuance_member) REFERENCES member(mem_id)
+  );
+
+[2025-02-26 12:59:16] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS users (
+    user_id SERIAL PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+  );
+
+[2025-02-26 12:59:16] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:00:16] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS member (
+    mem_id SERIAL PRIMARY KEY,
+    mem_name VARCHAR,
+    mem_phone VARCHAR,
+    mem_email VARCHAR
+  );
+
+[2025-02-26 13:00:16] [INFO] [database] - ✅ Connected to Aiven PostgreSQL
+[2025-02-26 13:00:16] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS membership (
+    membership_id SERIAL PRIMARY KEY,
+    member_id INTEGER,
+    status VARCHAR,
+    FOREIGN KEY (member_id) REFERENCES member(mem_id)
+  );
+
+[2025-02-26 13:00:16] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS collection (
+    collection_id SERIAL PRIMARY KEY,
+    collection_name VARCHAR
+  );
+
+[2025-02-26 13:00:16] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS category (
+    cat_id SERIAL PRIMARY KEY,
+    cat_name VARCHAR,
+    sub_cat_name VARCHAR
+  );
+
+[2025-02-26 13:00:16] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS book (
+    book_id SERIAL PRIMARY KEY,
+    book_name VARCHAR,
+    book_cat_id INTEGER,
+    book_collection_id INTEGER,    
+    book_launch_date TIMESTAMP,
+    book_publisher VARCHAR,
+    FOREIGN KEY (book_cat_id) REFERENCES category(cat_id),
+    FOREIGN KEY (book_collection_id) REFERENCES collection(collection_id)
+  );
+
+[2025-02-26 13:00:16] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS issuance (
+    issuance_id SERIAL PRIMARY KEY,
+    book_id INTEGER,
+    issuance_date TIMESTAMP,
+    issuance_member INTEGER,
+    issued_by VARCHAR,
+    target_return_date TIMESTAMP,
+    issuance_status VARCHAR,
+    FOREIGN KEY (book_id) REFERENCES book(book_id),
+    FOREIGN KEY (issuance_member) REFERENCES member(mem_id)
+  );
+
+[2025-02-26 13:00:16] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS users (
+    user_id SERIAL PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+  );
+
+[2025-02-26 13:00:16] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:00:34] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:00:34] [INFO] [database] - ✅ Connected to Aiven PostgreSQL
+[2025-02-26 13:00:35] [INFO] [databaseQuery] - Executing query: undefined
+[2025-02-26 13:00:35] [INFO] [database] - ✅ Connected to Aiven PostgreSQL
+[2025-02-26 13:00:35] [INFO] [databaseQuery] - Executing query: undefined
+[2025-02-26 13:00:35] [INFO] [databaseQuery] - Executing query: undefined
+[2025-02-26 13:00:35] [INFO] [databaseQuery] - Executing query: undefined
+[2025-02-26 13:00:35] [INFO] [databaseQuery] - Executing query: undefined
+[2025-02-26 13:00:35] [INFO] [databaseQuery] - Executing query: undefined
+[2025-02-26 13:00:35] [INFO] [databaseQuery] - Executing query: undefined
+[2025-02-26 13:00:35] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:00:42] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:00:43] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:00:43] [INFO] [database] - ✅ Connected to Aiven PostgreSQL
+[2025-02-26 13:00:44] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:00:44] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS member (
+    mem_id SERIAL PRIMARY KEY,
+    mem_name VARCHAR,
+    mem_phone VARCHAR,
+    mem_email VARCHAR
+  );
+
+[2025-02-26 13:00:45] [INFO] [database] - ✅ Connected to Aiven PostgreSQL
+[2025-02-26 13:00:45] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS membership (
+    membership_id SERIAL PRIMARY KEY,
+    member_id INTEGER,
+    status VARCHAR,
+    FOREIGN KEY (member_id) REFERENCES member(mem_id)
+  );
+
+[2025-02-26 13:00:45] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS collection (
+    collection_id SERIAL PRIMARY KEY,
+    collection_name VARCHAR
+  );
+
+[2025-02-26 13:00:45] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS category (
+    cat_id SERIAL PRIMARY KEY,
+    cat_name VARCHAR,
+    sub_cat_name VARCHAR
+  );
+
+[2025-02-26 13:00:45] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS book (
+    book_id SERIAL PRIMARY KEY,
+    book_name VARCHAR,
+    book_cat_id INTEGER,
+    book_collection_id INTEGER,    
+    book_launch_date TIMESTAMP,
+    book_publisher VARCHAR,
+    FOREIGN KEY (book_cat_id) REFERENCES category(cat_id),
+    FOREIGN KEY (book_collection_id) REFERENCES collection(collection_id)
+  );
+
+[2025-02-26 13:00:45] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS issuance (
+    issuance_id SERIAL PRIMARY KEY,
+    book_id INTEGER,
+    issuance_date TIMESTAMP,
+    issuance_member INTEGER,
+    issued_by VARCHAR,
+    target_return_date TIMESTAMP,
+    issuance_status VARCHAR,
+    FOREIGN KEY (book_id) REFERENCES book(book_id),
+    FOREIGN KEY (issuance_member) REFERENCES member(mem_id)
+  );
+
+[2025-02-26 13:00:45] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS users (
+    user_id SERIAL PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+  );
+
+[2025-02-26 13:00:45] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:01:51] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS member (
+    mem_id SERIAL PRIMARY KEY,
+    mem_name VARCHAR,
+    mem_phone VARCHAR,
+    mem_email VARCHAR
+  );
+
+[2025-02-26 13:01:51] [INFO] [database] - ✅ Connected to Aiven PostgreSQL
+[2025-02-26 13:01:51] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:01:51] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS membership (
+    membership_id SERIAL PRIMARY KEY,
+    member_id INTEGER,
+    status VARCHAR,
+    FOREIGN KEY (member_id) REFERENCES member(mem_id)
+  );
+
+[2025-02-26 13:01:51] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:01:51] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS collection (
+    collection_id SERIAL PRIMARY KEY,
+    collection_name VARCHAR
+  );
+
+[2025-02-26 13:01:51] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:01:51] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS category (
+    cat_id SERIAL PRIMARY KEY,
+    cat_name VARCHAR,
+    sub_cat_name VARCHAR
+  );
+
+[2025-02-26 13:01:51] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:01:51] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS book (
+    book_id SERIAL PRIMARY KEY,
+    book_name VARCHAR,
+    book_cat_id INTEGER,
+    book_collection_id INTEGER,    
+    book_launch_date TIMESTAMP,
+    book_publisher VARCHAR,
+    FOREIGN KEY (book_cat_id) REFERENCES category(cat_id),
+    FOREIGN KEY (book_collection_id) REFERENCES collection(collection_id)
+  );
+
+[2025-02-26 13:01:51] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:01:51] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS issuance (
+    issuance_id SERIAL PRIMARY KEY,
+    book_id INTEGER,
+    issuance_date TIMESTAMP,
+    issuance_member INTEGER,
+    issued_by VARCHAR,
+    target_return_date TIMESTAMP,
+    issuance_status VARCHAR,
+    FOREIGN KEY (book_id) REFERENCES book(book_id),
+    FOREIGN KEY (issuance_member) REFERENCES member(mem_id)
+  );
+
+[2025-02-26 13:01:52] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:01:52] [INFO] [databaseQuery] - Executing query: 
+  CREATE TABLE IF NOT EXISTS users (
+    user_id SERIAL PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+  );
+
+[2025-02-26 13:01:52] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:01:52] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:01:52] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:02:00] [INFO] [database] - ✅ Connected to Aiven PostgreSQL
+[2025-02-26 13:02:00] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:02:00] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:02:00] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:02:00] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:02:01] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:02:01] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:02:01] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:02:01] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:02:01] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:02:26] [INFO] [database] - ✅ Connected to Aiven PostgreSQL
+[2025-02-26 13:02:26] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:02:26] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:02:26] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:02:26] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:02:27] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:02:27] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:02:27] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:02:27] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:02:27] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:02:38] [INFO] [database] - ✅ Connected to Aiven PostgreSQL
+[2025-02-26 13:02:38] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:02:38] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:02:38] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:02:38] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:02:38] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:02:38] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:02:38] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:02:38] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:02:38] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:02:39] [INFO] [database] - ✅ Connected to Aiven PostgreSQL
+[2025-02-26 13:02:39] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:02:39] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:02:39] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:02:39] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:02:39] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:02:39] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:02:39] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:02:39] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:02:39] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:02:45] [INFO] [database] - ✅ Connected to Aiven PostgreSQL
+[2025-02-26 13:02:45] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:02:45] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:02:45] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:02:45] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:02:45] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:02:45] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:02:45] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:02:45] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:02:45] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:04:09] [INFO] [database] - Connected to Aiven PostgreSQL
+[2025-02-26 13:04:09] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:04:09] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:04:09] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:04:09] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:04:09] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:04:09] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:04:09] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:04:09] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:04:09] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:04:11] [INFO] [database] - Connected to Aiven PostgreSQL
+[2025-02-26 13:04:11] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:04:11] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:04:11] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:04:11] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:04:11] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:04:11] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:04:11] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:04:11] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:04:11] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:09:45] [INFO] [database] - Connected to Aiven PostgreSQL
+[2025-02-26 13:09:45] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:09:45] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:09:45] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:09:45] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:09:45] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:09:45] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:09:45] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:09:45] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:09:45] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:15:39] [INFO] [database] - Connected to Aiven PostgreSQL
+[2025-02-26 13:15:39] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:15:39] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:15:39] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:15:39] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:15:39] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:15:39] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:15:39] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:15:39] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:15:39] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:17:09] [INFO] [database] - Connected to Aiven PostgreSQL
+[2025-02-26 13:17:09] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:17:09] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:17:09] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:17:09] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:17:09] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:17:10] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:17:10] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:17:10] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:17:10] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:17:21] [INFO] [database] - Connected to Aiven PostgreSQL
+[2025-02-26 13:17:21] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:17:21] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:17:21] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:17:21] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:17:21] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:17:21] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:17:21] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:17:21] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:17:21] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:17:21] [INFO] [database] - Connected to Aiven PostgreSQL
+[2025-02-26 13:17:22] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:17:22] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:17:22] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:17:22] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:17:22] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:17:22] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:17:22] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:17:22] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:17:22] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:17:25] [INFO] [database] - Connected to Aiven PostgreSQL
+[2025-02-26 13:17:25] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:17:25] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:17:25] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:17:25] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:17:25] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:17:25] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:17:25] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:17:25] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:17:25] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:22:13] [INFO] [database] - Connected to Aiven PostgreSQL
+[2025-02-26 13:22:13] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:22:14] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:22:14] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:22:14] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:22:14] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:22:14] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:22:14] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:22:14] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:22:14] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:27:23] [INFO] [database] - Connected to Aiven PostgreSQL
+[2025-02-26 13:27:23] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:27:23] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:27:23] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:27:23] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:27:23] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:27:23] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:27:23] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:27:23] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:27:23] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:27:27] [INFO] [database] - Connected to Aiven PostgreSQL
+[2025-02-26 13:27:27] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:27:27] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:27:27] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:27:27] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:27:27] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:27:27] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:27:27] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:27:27] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:27:27] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:27:30] [INFO] [database] - Connected to Aiven PostgreSQL
+[2025-02-26 13:27:31] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:27:31] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:27:31] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:27:31] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:27:31] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:27:31] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:27:31] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:27:31] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:27:31] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:31:08] [INFO] [database] - Connected to Aiven PostgreSQL
+[2025-02-26 13:31:08] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:31:08] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:31:08] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:31:09] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:31:09] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:31:09] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:31:09] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:31:09] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:31:09] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:31:13] [INFO] [database] - Connected to Aiven PostgreSQL
+[2025-02-26 13:31:13] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:31:13] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:31:13] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:31:13] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:31:13] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:31:13] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:31:13] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:31:13] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:31:13] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:31:56] [INFO] [database] - Connected to Aiven PostgreSQL
+[2025-02-26 13:31:56] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:31:56] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:31:57] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:31:57] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:31:57] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:31:57] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:31:57] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:31:57] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:31:57] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:31:59] [INFO] [database] - Connected to Aiven PostgreSQL
+[2025-02-26 13:31:59] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:31:59] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:31:59] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:31:59] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:31:59] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:31:59] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:31:59] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:31:59] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:31:59] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:40:07] [INFO] [database] - Connected to Aiven PostgreSQL
+[2025-02-26 13:40:07] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:40:07] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:40:07] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:40:07] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:40:07] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:40:07] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:40:07] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:40:07] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:40:07] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:42:42] [INFO] [database] - Connected to Aiven PostgreSQL
+[2025-02-26 13:42:42] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:42:42] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:42:42] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:42:42] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:42:42] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:42:42] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:42:42] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:42:42] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:42:42] [INFO] [serverStart] - Server is running on http://localhost:3000
+[2025-02-26 13:43:08] [INFO] [database] - Connected to Aiven PostgreSQL
+[2025-02-26 13:43:08] [INFO] [initDB] - Member table initialized.
+[2025-02-26 13:43:08] [INFO] [initDB] - Membership table initialized.
+[2025-02-26 13:43:08] [INFO] [initDB] - Collection table initialized.
+[2025-02-26 13:43:08] [INFO] [initDB] - Category table initialized.
+[2025-02-26 13:43:08] [INFO] [initDB] - Book table initialized.
+[2025-02-26 13:43:08] [INFO] [initDB] - Issuance table initialized.
+[2025-02-26 13:43:08] [INFO] [initDB] - Users table initialized.
+[2025-02-26 13:43:08] [INFO] [initDB] - Database initialized successfully.
+[2025-02-26 13:43:08] [INFO] [serverStart] - Server is running on http://localhost:3000
+{"functionName":"database","level":"info","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:45:47"}
+{"functionName":"initDB","level":"info","message":"Member table initialized.","timestamp":"2025-02-26 13:45:47"}
+{"functionName":"initDB","level":"info","message":"Membership table initialized.","timestamp":"2025-02-26 13:45:47"}
+{"functionName":"initDB","level":"info","message":"Collection table initialized.","timestamp":"2025-02-26 13:45:47"}
+{"functionName":"initDB","level":"info","message":"Category table initialized.","timestamp":"2025-02-26 13:45:47"}
+{"functionName":"initDB","level":"info","message":"Book table initialized.","timestamp":"2025-02-26 13:45:48"}
+{"functionName":"initDB","level":"info","message":"Issuance table initialized.","timestamp":"2025-02-26 13:45:48"}
+{"functionName":"initDB","level":"info","message":"Users table initialized.","timestamp":"2025-02-26 13:45:48"}
+{"functionName":"initDB","level":"info","message":"Database initialized successfully.","timestamp":"2025-02-26 13:45:48"}
+{"functionName":"serverStart","level":"info","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:45:48"}
+{"functionName":"database","level":"info","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:46:08"}
+{"functionName":"initDB","level":"info","message":"Member table initialized.","timestamp":"2025-02-26 13:46:08"}
+{"functionName":"initDB","level":"info","message":"Membership table initialized.","timestamp":"2025-02-26 13:46:08"}
+{"functionName":"initDB","level":"info","message":"Collection table initialized.","timestamp":"2025-02-26 13:46:08"}
+{"functionName":"initDB","level":"info","message":"Category table initialized.","timestamp":"2025-02-26 13:46:08"}
+{"functionName":"initDB","level":"info","message":"Book table initialized.","timestamp":"2025-02-26 13:46:08"}
+{"functionName":"initDB","level":"info","message":"Issuance table initialized.","timestamp":"2025-02-26 13:46:08"}
+{"functionName":"initDB","level":"info","message":"Users table initialized.","timestamp":"2025-02-26 13:46:08"}
+{"functionName":"initDB","level":"info","message":"Database initialized successfully.","timestamp":"2025-02-26 13:46:08"}
+{"functionName":"serverStart","level":"info","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:46:08"}
+{"functionName":"database","level":"info","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:46:10"}
+{"functionName":"initDB","level":"info","message":"Member table initialized.","timestamp":"2025-02-26 13:46:10"}
+{"functionName":"initDB","level":"info","message":"Membership table initialized.","timestamp":"2025-02-26 13:46:10"}
+{"functionName":"initDB","level":"info","message":"Collection table initialized.","timestamp":"2025-02-26 13:46:10"}
+{"functionName":"initDB","level":"info","message":"Category table initialized.","timestamp":"2025-02-26 13:46:10"}
+{"functionName":"initDB","level":"info","message":"Book table initialized.","timestamp":"2025-02-26 13:46:10"}
+{"functionName":"initDB","level":"info","message":"Issuance table initialized.","timestamp":"2025-02-26 13:46:10"}
+{"functionName":"initDB","level":"info","message":"Users table initialized.","timestamp":"2025-02-26 13:46:10"}
+{"functionName":"initDB","level":"info","message":"Database initialized successfully.","timestamp":"2025-02-26 13:46:10"}
+{"functionName":"serverStart","level":"info","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:46:10"}
+{"functionName":"database","level":"error","message":"Database connection error: database \"avnadmin\" does not exist","timestamp":"2025-02-26 13:46:21"}
+{"functionName":"database","level":"info","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:46:24"}
+{"functionName":"initDB","level":"info","message":"Member table initialized.","timestamp":"2025-02-26 13:46:24"}
+{"functionName":"initDB","level":"info","message":"Membership table initialized.","timestamp":"2025-02-26 13:46:24"}
+{"functionName":"initDB","level":"info","message":"Collection table initialized.","timestamp":"2025-02-26 13:46:24"}
+{"functionName":"initDB","level":"info","message":"Category table initialized.","timestamp":"2025-02-26 13:46:24"}
+{"functionName":"initDB","level":"info","message":"Book table initialized.","timestamp":"2025-02-26 13:46:24"}
+{"functionName":"initDB","level":"info","message":"Issuance table initialized.","timestamp":"2025-02-26 13:46:24"}
+{"functionName":"initDB","level":"info","message":"Users table initialized.","timestamp":"2025-02-26 13:46:24"}
+{"functionName":"initDB","level":"info","message":"Database initialized successfully.","timestamp":"2025-02-26 13:46:24"}
+{"functionName":"serverStart","level":"info","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:46:24"}
+{"functionName":"initDB","level":"info","message":"Member table initialized.","timestamp":"2025-02-26 13:46:48"}
+{"functionName":"initDB","level":"info","message":"Membership table initialized.","timestamp":"2025-02-26 13:46:48"}
+{"functionName":"initDB","level":"info","message":"Collection table initialized.","timestamp":"2025-02-26 13:46:48"}
+{"functionName":"initDB","level":"info","message":"Category table initialized.","timestamp":"2025-02-26 13:46:48"}
+{"functionName":"initDB","level":"info","message":"Book table initialized.","timestamp":"2025-02-26 13:46:48"}
+{"functionName":"initDB","level":"info","message":"Issuance table initialized.","timestamp":"2025-02-26 13:46:48"}
+{"functionName":"initDB","level":"info","message":"Users table initialized.","timestamp":"2025-02-26 13:46:48"}
+{"functionName":"initDB","level":"info","message":"Database initialized successfully.","timestamp":"2025-02-26 13:46:48"}
+{"functionName":"serverStart","level":"info","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:46:48"}
+{"functionName":"initDB","level":"info","message":"Member table initialized.","timestamp":"2025-02-26 13:47:05"}
+{"functionName":"initDB","level":"info","message":"Membership table initialized.","timestamp":"2025-02-26 13:47:05"}
+{"functionName":"initDB","level":"info","message":"Collection table initialized.","timestamp":"2025-02-26 13:47:05"}
+{"functionName":"initDB","level":"info","message":"Category table initialized.","timestamp":"2025-02-26 13:47:05"}
+{"functionName":"initDB","level":"info","message":"Book table initialized.","timestamp":"2025-02-26 13:47:05"}
+{"functionName":"initDB","level":"info","message":"Issuance table initialized.","timestamp":"2025-02-26 13:47:05"}
+{"functionName":"initDB","level":"info","message":"Users table initialized.","timestamp":"2025-02-26 13:47:05"}
+{"functionName":"initDB","level":"info","message":"Database initialized successfully.","timestamp":"2025-02-26 13:47:05"}
+{"functionName":"serverStart","level":"info","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:47:05"}
+{"functionName":"initDB","level":"info","message":"Member table initialized.","timestamp":"2025-02-26 13:47:07"}
+{"functionName":"initDB","level":"info","message":"Membership table initialized.","timestamp":"2025-02-26 13:47:07"}
+{"functionName":"initDB","level":"info","message":"Collection table initialized.","timestamp":"2025-02-26 13:47:07"}
+{"functionName":"initDB","level":"info","message":"Category table initialized.","timestamp":"2025-02-26 13:47:07"}
+{"functionName":"initDB","level":"info","message":"Book table initialized.","timestamp":"2025-02-26 13:47:07"}
+{"functionName":"initDB","level":"info","message":"Issuance table initialized.","timestamp":"2025-02-26 13:47:07"}
+{"functionName":"initDB","level":"info","message":"Users table initialized.","timestamp":"2025-02-26 13:47:07"}
+{"functionName":"initDB","level":"info","message":"Database initialized successfully.","timestamp":"2025-02-26 13:47:07"}
+{"functionName":"serverStart","level":"info","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:47:07"}
+{"functionName":"initDB","level":"info","message":"Member table initialized.","timestamp":"2025-02-26 13:47:18"}
+{"functionName":"initDB","level":"info","message":"Membership table initialized.","timestamp":"2025-02-26 13:47:18"}
+{"functionName":"initDB","level":"info","message":"Collection table initialized.","timestamp":"2025-02-26 13:47:18"}
+{"functionName":"initDB","level":"info","message":"Category table initialized.","timestamp":"2025-02-26 13:47:18"}
+{"functionName":"initDB","level":"info","message":"Book table initialized.","timestamp":"2025-02-26 13:47:18"}
+{"functionName":"initDB","level":"info","message":"Issuance table initialized.","timestamp":"2025-02-26 13:47:18"}
+{"functionName":"initDB","level":"info","message":"Users table initialized.","timestamp":"2025-02-26 13:47:18"}
+{"functionName":"initDB","level":"info","message":"Database initialized successfully.","timestamp":"2025-02-26 13:47:18"}
+{"functionName":"initDB","level":"info","message":"Member table initialized.","timestamp":"2025-02-26 13:47:20"}
+{"functionName":"initDB","level":"info","message":"Membership table initialized.","timestamp":"2025-02-26 13:47:20"}
+{"functionName":"initDB","level":"info","message":"Collection table initialized.","timestamp":"2025-02-26 13:47:20"}
+{"functionName":"initDB","level":"info","message":"Category table initialized.","timestamp":"2025-02-26 13:47:20"}
+{"functionName":"initDB","level":"info","message":"Book table initialized.","timestamp":"2025-02-26 13:47:20"}
+{"functionName":"initDB","level":"info","message":"Issuance table initialized.","timestamp":"2025-02-26 13:47:20"}
+{"functionName":"initDB","level":"info","message":"Users table initialized.","timestamp":"2025-02-26 13:47:20"}
+{"functionName":"initDB","level":"info","message":"Database initialized successfully.","timestamp":"2025-02-26 13:47:20"}
+{"functionName":"initDB","level":"info","message":"Member table initialized.","timestamp":"2025-02-26 13:47:27"}
+{"functionName":"initDB","level":"info","message":"Membership table initialized.","timestamp":"2025-02-26 13:47:27"}
+{"functionName":"initDB","level":"info","message":"Collection table initialized.","timestamp":"2025-02-26 13:47:27"}
+{"functionName":"initDB","level":"info","message":"Category table initialized.","timestamp":"2025-02-26 13:47:28"}
+{"functionName":"initDB","level":"info","message":"Book table initialized.","timestamp":"2025-02-26 13:47:28"}
+{"functionName":"initDB","level":"info","message":"Issuance table initialized.","timestamp":"2025-02-26 13:47:28"}
+{"functionName":"initDB","level":"info","message":"Users table initialized.","timestamp":"2025-02-26 13:47:28"}
+{"functionName":"initDB","level":"info","message":"Database initialized successfully.","timestamp":"2025-02-26 13:47:28"}
+{"functionName":"initDB","level":"info","message":"Member table initialized.","timestamp":"2025-02-26 13:47:30"}
+{"functionName":"initDB","level":"info","message":"Membership table initialized.","timestamp":"2025-02-26 13:47:30"}
+{"functionName":"initDB","level":"info","message":"Collection table initialized.","timestamp":"2025-02-26 13:47:30"}
+{"functionName":"initDB","level":"info","message":"Category table initialized.","timestamp":"2025-02-26 13:47:30"}
+{"functionName":"initDB","level":"info","message":"Book table initialized.","timestamp":"2025-02-26 13:47:30"}
+{"functionName":"initDB","level":"info","message":"Issuance table initialized.","timestamp":"2025-02-26 13:47:30"}
+{"functionName":"initDB","level":"info","message":"Users table initialized.","timestamp":"2025-02-26 13:47:30"}
+{"functionName":"initDB","level":"info","message":"Database initialized successfully.","timestamp":"2025-02-26 13:47:30"}
+{"functionName":"initDB","level":"info","message":"Member table initialized.","timestamp":"2025-02-26 13:48:48"}
+{"functionName":"initDB","level":"info","message":"Membership table initialized.","timestamp":"2025-02-26 13:48:48"}
+{"functionName":"initDB","level":"info","message":"Collection table initialized.","timestamp":"2025-02-26 13:48:48"}
+{"functionName":"initDB","level":"info","message":"Category table initialized.","timestamp":"2025-02-26 13:48:48"}
+{"functionName":"initDB","level":"info","message":"Book table initialized.","timestamp":"2025-02-26 13:48:48"}
+{"functionName":"initDB","level":"info","message":"Issuance table initialized.","timestamp":"2025-02-26 13:48:48"}
+{"functionName":"initDB","level":"info","message":"Users table initialized.","timestamp":"2025-02-26 13:48:48"}
+{"functionName":"initDB","level":"info","message":"Database initialized successfully.","timestamp":"2025-02-26 13:48:48"}
+{"functionName":"initDB","level":"info","message":"Member table initialized.","timestamp":"2025-02-26 13:49:01"}
+{"functionName":"initDB","level":"info","message":"Membership table initialized.","timestamp":"2025-02-26 13:49:01"}
+{"functionName":"initDB","level":"info","message":"Collection table initialized.","timestamp":"2025-02-26 13:49:01"}
+{"functionName":"initDB","level":"info","message":"Category table initialized.","timestamp":"2025-02-26 13:49:01"}
+{"functionName":"initDB","level":"info","message":"Book table initialized.","timestamp":"2025-02-26 13:49:01"}
+{"functionName":"initDB","level":"info","message":"Issuance table initialized.","timestamp":"2025-02-26 13:49:01"}
+{"functionName":"initDB","level":"info","message":"Users table initialized.","timestamp":"2025-02-26 13:49:01"}
+{"functionName":"initDB","level":"info","message":"Database initialized successfully.","timestamp":"2025-02-26 13:49:01"}
+{"functionName":"initDB","level":"info","message":"Member table initialized.","timestamp":"2025-02-26 13:49:11"}
+{"functionName":"initDB","level":"info","message":"Membership table initialized.","timestamp":"2025-02-26 13:49:11"}
+{"functionName":"initDB","level":"info","message":"Collection table initialized.","timestamp":"2025-02-26 13:49:11"}
+{"functionName":"initDB","level":"info","message":"Category table initialized.","timestamp":"2025-02-26 13:49:11"}
+{"functionName":"initDB","level":"info","message":"Book table initialized.","timestamp":"2025-02-26 13:49:11"}
+{"functionName":"initDB","level":"info","message":"Issuance table initialized.","timestamp":"2025-02-26 13:49:11"}
+{"functionName":"initDB","level":"info","message":"Users table initialized.","timestamp":"2025-02-26 13:49:11"}
+{"functionName":"initDB","level":"info","message":"Database initialized successfully.","timestamp":"2025-02-26 13:49:11"}
+{"functionName":"serverStart","level":"info","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:49:11"}
+{"functionName":"database","level":"error","message":"Database connection error: database \"avnadmin\" does not exist","timestamp":"2025-02-26 13:49:21"}
+{"functionName":"database","level":"info","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:49:22"}
+{"functionName":"initDB","level":"info","message":"Member table initialized.","timestamp":"2025-02-26 13:49:22"}
+{"functionName":"initDB","level":"info","message":"Membership table initialized.","timestamp":"2025-02-26 13:49:22"}
+{"functionName":"initDB","level":"info","message":"Collection table initialized.","timestamp":"2025-02-26 13:49:22"}
+{"functionName":"initDB","level":"info","message":"Category table initialized.","timestamp":"2025-02-26 13:49:22"}
+{"functionName":"initDB","level":"info","message":"Book table initialized.","timestamp":"2025-02-26 13:49:22"}
+{"functionName":"initDB","level":"info","message":"Issuance table initialized.","timestamp":"2025-02-26 13:49:22"}
+{"functionName":"initDB","level":"info","message":"Users table initialized.","timestamp":"2025-02-26 13:49:22"}
+{"functionName":"initDB","level":"info","message":"Database initialized successfully.","timestamp":"2025-02-26 13:49:22"}
+{"functionName":"serverStart","level":"info","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:49:22"}
+{"functionName":"database","level":"INFO","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:49:36"}
+{"functionName":"initDB","level":"INFO","message":"Member table initialized.","timestamp":"2025-02-26 13:49:36"}
+{"functionName":"initDB","level":"INFO","message":"Membership table initialized.","timestamp":"2025-02-26 13:49:36"}
+{"functionName":"initDB","level":"INFO","message":"Collection table initialized.","timestamp":"2025-02-26 13:49:36"}
+{"functionName":"initDB","level":"INFO","message":"Category table initialized.","timestamp":"2025-02-26 13:49:36"}
+{"functionName":"initDB","level":"INFO","message":"Book table initialized.","timestamp":"2025-02-26 13:49:36"}
+{"functionName":"initDB","level":"INFO","message":"Issuance table initialized.","timestamp":"2025-02-26 13:49:36"}
+{"functionName":"initDB","level":"INFO","message":"Users table initialized.","timestamp":"2025-02-26 13:49:36"}
+{"functionName":"initDB","level":"INFO","message":"Database initialized successfully.","timestamp":"2025-02-26 13:49:36"}
+{"functionName":"serverStart","level":"INFO","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:49:36"}
+{"functionName":"database","level":"INFO","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:49:47"}
+{"functionName":"initDB","level":"INFO","message":"Member table initialized.","timestamp":"2025-02-26 13:49:47"}
+{"functionName":"initDB","level":"INFO","message":"Membership table initialized.","timestamp":"2025-02-26 13:49:47"}
+{"functionName":"initDB","level":"INFO","message":"Collection table initialized.","timestamp":"2025-02-26 13:49:47"}
+{"functionName":"initDB","level":"INFO","message":"Category table initialized.","timestamp":"2025-02-26 13:49:47"}
+{"functionName":"initDB","level":"INFO","message":"Book table initialized.","timestamp":"2025-02-26 13:49:47"}
+{"functionName":"initDB","level":"INFO","message":"Issuance table initialized.","timestamp":"2025-02-26 13:49:47"}
+{"functionName":"initDB","level":"INFO","message":"Users table initialized.","timestamp":"2025-02-26 13:49:48"}
+{"functionName":"initDB","level":"INFO","message":"Database initialized successfully.","timestamp":"2025-02-26 13:49:48"}
+{"functionName":"serverStart","level":"INFO","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:49:48"}
+{"functionName":"database","level":"INFO","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:49:50"}
+{"functionName":"initDB","level":"INFO","message":"Member table initialized.","timestamp":"2025-02-26 13:49:50"}
+{"functionName":"initDB","level":"INFO","message":"Membership table initialized.","timestamp":"2025-02-26 13:49:50"}
+{"functionName":"initDB","level":"INFO","message":"Collection table initialized.","timestamp":"2025-02-26 13:49:50"}
+{"functionName":"initDB","level":"INFO","message":"Category table initialized.","timestamp":"2025-02-26 13:49:50"}
+{"functionName":"initDB","level":"INFO","message":"Book table initialized.","timestamp":"2025-02-26 13:49:50"}
+{"functionName":"initDB","level":"INFO","message":"Issuance table initialized.","timestamp":"2025-02-26 13:49:50"}
+{"functionName":"initDB","level":"INFO","message":"Users table initialized.","timestamp":"2025-02-26 13:49:50"}
+{"functionName":"initDB","level":"INFO","message":"Database initialized successfully.","timestamp":"2025-02-26 13:49:50"}
+{"functionName":"serverStart","level":"INFO","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:49:50"}

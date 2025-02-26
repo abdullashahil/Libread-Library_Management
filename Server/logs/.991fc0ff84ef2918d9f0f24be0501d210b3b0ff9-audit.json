@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/macbookpro/Desktop/My websites/interview websites/Library_Management/Server/logs/.991fc0ff84ef2918d9f0f24be0501d210b3b0ff9-audit.json",
+    "files": [
+        {
+            "date": 1740558092181,
+            "name": "/Users/macbookpro/Desktop/My websites/interview websites/Library_Management/Server/logs/app-2025-02-26.log",
+            "hash": "fe63249c5c2d55f3f0a8c1376aeae86666790b746de8bfe61fc6bb0d2cf51999"
+        }
+    ],
+    "hashType": "sha256"
+}

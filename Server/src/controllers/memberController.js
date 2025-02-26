@@ -1,80 +1,85 @@
 import * as memberService from "../services/memberServices.js";
+import { logMessage } from "../logger.js";
 
-// handles both get all and filtered members
 export const getMembers = async (req, res) => {
     try {
-      const searchTerm = req.query.q;
-  
-      if (searchTerm) {
-        // If ?q= is present, do a search
-        const membersFound = await memberService.searchMember(searchTerm);
-        return res.status(200).json(membersFound);
-      } else {
-        // Otherwise, get all members
-        const members = await memberService.getMembers();
-        return res.status(200).json(members);
-      }
+        const searchTerm = req.query.q;
+        if (searchTerm) {
+            logMessage("info", "Member", `Searching members with query: ${searchTerm}`);
+            const membersFound = await memberService.searchMember(searchTerm);
+            return res.status(200).json(membersFound);
+        } else {
+            logMessage("info", "Member", "Fetching all members");
+            const members = await memberService.getMembers();
+            return res.status(200).json(members);
+        }
     } catch (err) {
-      console.error('Error fetching members:', err);
-      res.status(500).json({ message: 'Internal Server Error' });
+        logMessage("error", "Member", `Error fetching members: ${err.message}`);
+        res.status(500).json({ message: "Internal Server Error" });
     }
-  };
-  
+};
 
 export const getMemberById = async (req, res) => {
     try {
-      const memberId = req.params.id;
-      const member = await memberService.getMemberById(memberId);
-      if (!member) {
-        return res.status(404).json({ message: "Member not found" });
-      }
-      res.status(200).json(member);
+        const memberId = req.params.id;
+        logMessage("info", "Member", `Fetching member with ID: ${memberId}`);
+        
+        const member = await memberService.getMemberById(memberId);
+        if (!member) {
+            logMessage("warn", "Member", `Member not found: ID ${memberId}`);
+            return res.status(404).json({ message: "Member not found" });
+        }
+        res.status(200).json(member);
     } catch (err) {
-      console.error('Error fetching member by ID:', err);
-      res.status(500).json({ message: 'Internal Server Error' });
+        logMessage("error", "Member", `Error fetching member by ID: ${err.message}`);
+        res.status(500).json({ message: "Internal Server Error" });
     }
-  };
+};
 
 export const createMember = async (req, res) => {
     try {
         const memberData = req.body;
-
+        logMessage("info", "Member", "Creating new member", memberData);
+        
         const newMember = await memberService.createMember(memberData);
         res.status(200).json(newMember);
     } catch (err) { 
-        console.error('Error creating new member:', err);
-        res.status(500).json({ message: 'Internal Server Error' });
+        logMessage("error", "Member", `Error creating new member: ${err.message}`);
+        res.status(500).json({ message: "Internal Server Error" });
     }
 };
 
 export const updateMember = async (req, res) => {
     try {
-        const memberId = req.params.id
-        const memberData = req.body
-
+        const memberId = req.params.id;
+        const memberData = req.body;
+        logMessage("info", "Member", `Updating member ID: ${memberId}`, memberData);
+        
         const updatedMember = await memberService.updateMember(memberData, memberId);
         if (!updatedMember) {
-            return res.status(404).json({ message : "Member not found"})
+            logMessage("warn", "Member", `Member not found for update: ID ${memberId}`);
+            return res.status(404).json({ message: "Member not found" });
         }
         res.status(200).json(updatedMember);
     } catch (err) { 
-        console.error('Error updating member:', err);
-        res.status(500).json({ message: 'Internal Server Error' });
+        logMessage("error", "Member", `Error updating member: ${err.message}`);
+        res.status(500).json({ message: "Internal Server Error" });
     }
 };
 
 export const deleteMember = async (req, res) => {
     try {
-        const memberId = req.params.id
-
+        const memberId = req.params.id;
+        logMessage("info", "Member", `Deleting member ID: ${memberId}`);
+        
         const deletedMember = await memberService.deleteMember(memberId);
         if (!deletedMember) {
-            return res.status(404).json({ message : "Member not found"})
+            logMessage("warn", "Member", `Member not found for deletion: ID ${memberId}`);
+            return res.status(404).json({ message: "Member not found" });
         }
         res.status(200).json(deletedMember);
     } catch (err) { 
-        console.error('Error deleting member:', err);
-        res.status(500).json({ message: 'Internal Server Error' });
+        logMessage("error", "Member", `Error deleting member: ${err.message}`);
+        res.status(500).json({ message: "Internal Server Error" });
     }
 };
-

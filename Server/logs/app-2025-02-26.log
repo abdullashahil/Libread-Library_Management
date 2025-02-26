@@ -1,0 +1,120 @@
+{"functionName":"database","level":"INFO","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:51:32"}
+{"functionName":"initDB","level":"INFO","message":"Member table initialized.","timestamp":"2025-02-26 13:51:32"}
+{"functionName":"initDB","level":"INFO","message":"Membership table initialized.","timestamp":"2025-02-26 13:51:32"}
+{"functionName":"initDB","level":"INFO","message":"Collection table initialized.","timestamp":"2025-02-26 13:51:32"}
+{"functionName":"initDB","level":"INFO","message":"Category table initialized.","timestamp":"2025-02-26 13:51:32"}
+{"functionName":"initDB","level":"INFO","message":"Book table initialized.","timestamp":"2025-02-26 13:51:32"}
+{"functionName":"initDB","level":"INFO","message":"Issuance table initialized.","timestamp":"2025-02-26 13:51:32"}
+{"functionName":"initDB","level":"INFO","message":"Users table initialized.","timestamp":"2025-02-26 13:51:32"}
+{"functionName":"initDB","level":"INFO","message":"Database initialized successfully.","timestamp":"2025-02-26 13:51:32"}
+{"functionName":"serverStart","level":"INFO","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:51:32"}
+{"functionName":"database","level":"INFO","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:51:54"}
+{"functionName":"initDB","level":"INFO","message":"Member table initialized.","timestamp":"2025-02-26 13:51:54"}
+{"functionName":"initDB","level":"INFO","message":"Membership table initialized.","timestamp":"2025-02-26 13:51:54"}
+{"functionName":"initDB","level":"INFO","message":"Collection table initialized.","timestamp":"2025-02-26 13:51:54"}
+{"functionName":"initDB","level":"INFO","message":"Category table initialized.","timestamp":"2025-02-26 13:51:54"}
+{"functionName":"initDB","level":"INFO","message":"Book table initialized.","timestamp":"2025-02-26 13:51:54"}
+{"functionName":"initDB","level":"INFO","message":"Issuance table initialized.","timestamp":"2025-02-26 13:51:54"}
+{"functionName":"initDB","level":"INFO","message":"Users table initialized.","timestamp":"2025-02-26 13:51:54"}
+{"functionName":"initDB","level":"INFO","message":"Database initialized successfully.","timestamp":"2025-02-26 13:51:54"}
+{"functionName":"serverStart","level":"INFO","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:51:54"}
+{"functionName":"database","level":"INFO","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:52:12"}
+{"functionName":"initDB","level":"INFO","message":"Member table initialized.","timestamp":"2025-02-26 13:52:12"}
+{"functionName":"initDB","level":"INFO","message":"Membership table initialized.","timestamp":"2025-02-26 13:52:12"}
+{"functionName":"initDB","level":"INFO","message":"Collection table initialized.","timestamp":"2025-02-26 13:52:12"}
+{"functionName":"initDB","level":"INFO","message":"Category table initialized.","timestamp":"2025-02-26 13:52:12"}
+{"functionName":"initDB","level":"INFO","message":"Book table initialized.","timestamp":"2025-02-26 13:52:12"}
+{"functionName":"initDB","level":"INFO","message":"Issuance table initialized.","timestamp":"2025-02-26 13:52:12"}
+{"functionName":"initDB","level":"INFO","message":"Users table initialized.","timestamp":"2025-02-26 13:52:12"}
+{"functionName":"initDB","level":"INFO","message":"Database initialized successfully.","timestamp":"2025-02-26 13:52:12"}
+{"functionName":"serverStart","level":"INFO","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:52:12"}
+{"functionName":"database","level":"INFO","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:52:15"}
+{"functionName":"initDB","level":"INFO","message":"Member table initialized.","timestamp":"2025-02-26 13:52:15"}
+{"functionName":"initDB","level":"INFO","message":"Membership table initialized.","timestamp":"2025-02-26 13:52:15"}
+{"functionName":"initDB","level":"INFO","message":"Collection table initialized.","timestamp":"2025-02-26 13:52:15"}
+{"functionName":"initDB","level":"INFO","message":"Category table initialized.","timestamp":"2025-02-26 13:52:15"}
+{"functionName":"initDB","level":"INFO","message":"Book table initialized.","timestamp":"2025-02-26 13:52:15"}
+{"functionName":"initDB","level":"INFO","message":"Issuance table initialized.","timestamp":"2025-02-26 13:52:15"}
+{"functionName":"initDB","level":"INFO","message":"Users table initialized.","timestamp":"2025-02-26 13:52:15"}
+{"functionName":"initDB","level":"INFO","message":"Database initialized successfully.","timestamp":"2025-02-26 13:52:15"}
+{"functionName":"serverStart","level":"INFO","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:52:15"}
+{"functionName":"database","level":"INFO","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:52:24"}
+{"functionName":"initDB","level":"INFO","message":"Member table initialized.","timestamp":"2025-02-26 13:52:24"}
+{"functionName":"initDB","level":"INFO","message":"Membership table initialized.","timestamp":"2025-02-26 13:52:24"}
+{"functionName":"initDB","level":"INFO","message":"Collection table initialized.","timestamp":"2025-02-26 13:52:24"}
+{"functionName":"initDB","level":"INFO","message":"Category table initialized.","timestamp":"2025-02-26 13:52:24"}
+{"functionName":"initDB","level":"INFO","message":"Book table initialized.","timestamp":"2025-02-26 13:52:24"}
+{"functionName":"initDB","level":"INFO","message":"Issuance table initialized.","timestamp":"2025-02-26 13:52:24"}
+{"functionName":"initDB","level":"INFO","message":"Users table initialized.","timestamp":"2025-02-26 13:52:24"}
+{"functionName":"initDB","level":"INFO","message":"Database initialized successfully.","timestamp":"2025-02-26 13:52:24"}
+{"functionName":"serverStart","level":"INFO","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:52:24"}
+{"functionName":"database","level":"INFO","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:52:37"}
+{"functionName":"initDB","level":"INFO","message":"Member table initialized.","timestamp":"2025-02-26 13:52:37"}
+{"functionName":"initDB","level":"INFO","message":"Membership table initialized.","timestamp":"2025-02-26 13:52:37"}
+{"functionName":"initDB","level":"INFO","message":"Collection table initialized.","timestamp":"2025-02-26 13:52:37"}
+{"functionName":"initDB","level":"INFO","message":"Category table initialized.","timestamp":"2025-02-26 13:52:37"}
+{"functionName":"initDB","level":"INFO","message":"Book table initialized.","timestamp":"2025-02-26 13:52:37"}
+{"functionName":"initDB","level":"INFO","message":"Issuance table initialized.","timestamp":"2025-02-26 13:52:37"}
+{"functionName":"initDB","level":"INFO","message":"Users table initialized.","timestamp":"2025-02-26 13:52:37"}
+{"functionName":"initDB","level":"INFO","message":"Database initialized successfully.","timestamp":"2025-02-26 13:52:37"}
+{"functionName":"serverStart","level":"INFO","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:52:37"}
+{"functionName":"database","level":"INFO","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:52:45"}
+{"functionName":"initDB","level":"INFO","message":"Member table initialized.","timestamp":"2025-02-26 13:52:45"}
+{"functionName":"initDB","level":"INFO","message":"Membership table initialized.","timestamp":"2025-02-26 13:52:45"}
+{"functionName":"initDB","level":"INFO","message":"Collection table initialized.","timestamp":"2025-02-26 13:52:45"}
+{"functionName":"initDB","level":"INFO","message":"Category table initialized.","timestamp":"2025-02-26 13:52:45"}
+{"functionName":"initDB","level":"INFO","message":"Book table initialized.","timestamp":"2025-02-26 13:52:45"}
+{"functionName":"initDB","level":"INFO","message":"Issuance table initialized.","timestamp":"2025-02-26 13:52:45"}
+{"functionName":"initDB","level":"INFO","message":"Users table initialized.","timestamp":"2025-02-26 13:52:45"}
+{"functionName":"initDB","level":"INFO","message":"Database initialized successfully.","timestamp":"2025-02-26 13:52:45"}
+{"functionName":"serverStart","level":"INFO","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:52:45"}
+{"functionName":"database","level":"INFO","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:52:49"}
+{"functionName":"initDB","level":"INFO","message":"Member table initialized.","timestamp":"2025-02-26 13:52:50"}
+{"functionName":"initDB","level":"INFO","message":"Membership table initialized.","timestamp":"2025-02-26 13:52:50"}
+{"functionName":"initDB","level":"INFO","message":"Collection table initialized.","timestamp":"2025-02-26 13:52:50"}
+{"functionName":"initDB","level":"INFO","message":"Category table initialized.","timestamp":"2025-02-26 13:52:50"}
+{"functionName":"initDB","level":"INFO","message":"Book table initialized.","timestamp":"2025-02-26 13:52:50"}
+{"functionName":"initDB","level":"INFO","message":"Issuance table initialized.","timestamp":"2025-02-26 13:52:50"}
+{"functionName":"initDB","level":"INFO","message":"Users table initialized.","timestamp":"2025-02-26 13:52:50"}
+{"functionName":"initDB","level":"INFO","message":"Database initialized successfully.","timestamp":"2025-02-26 13:52:50"}
+{"functionName":"serverStart","level":"INFO","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:52:50"}
+{"functionName":"database","level":"INFO","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:53:15"}
+{"functionName":"initDB","level":"INFO","message":"Member table initialized.","timestamp":"2025-02-26 13:53:15"}
+{"functionName":"initDB","level":"INFO","message":"Membership table initialized.","timestamp":"2025-02-26 13:53:15"}
+{"functionName":"initDB","level":"INFO","message":"Collection table initialized.","timestamp":"2025-02-26 13:53:15"}
+{"functionName":"initDB","level":"INFO","message":"Category table initialized.","timestamp":"2025-02-26 13:53:15"}
+{"functionName":"initDB","level":"INFO","message":"Book table initialized.","timestamp":"2025-02-26 13:53:15"}
+{"functionName":"initDB","level":"INFO","message":"Issuance table initialized.","timestamp":"2025-02-26 13:53:15"}
+{"functionName":"initDB","level":"INFO","message":"Users table initialized.","timestamp":"2025-02-26 13:53:15"}
+{"functionName":"initDB","level":"INFO","message":"Database initialized successfully.","timestamp":"2025-02-26 13:53:15"}
+{"functionName":"serverStart","level":"INFO","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:53:15"}
+{"functionName":"database","level":"INFO","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:53:17"}
+{"functionName":"initDB","level":"INFO","message":"Member table initialized.","timestamp":"2025-02-26 13:53:17"}
+{"functionName":"initDB","level":"INFO","message":"Membership table initialized.","timestamp":"2025-02-26 13:53:17"}
+{"functionName":"initDB","level":"INFO","message":"Collection table initialized.","timestamp":"2025-02-26 13:53:17"}
+{"functionName":"initDB","level":"INFO","message":"Category table initialized.","timestamp":"2025-02-26 13:53:17"}
+{"functionName":"initDB","level":"INFO","message":"Book table initialized.","timestamp":"2025-02-26 13:53:17"}
+{"functionName":"initDB","level":"INFO","message":"Issuance table initialized.","timestamp":"2025-02-26 13:53:17"}
+{"functionName":"initDB","level":"INFO","message":"Users table initialized.","timestamp":"2025-02-26 13:53:17"}
+{"functionName":"initDB","level":"INFO","message":"Database initialized successfully.","timestamp":"2025-02-26 13:53:17"}
+{"functionName":"serverStart","level":"INFO","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:53:17"}
+{"functionName":"database","level":"INFO","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:53:20"}
+{"functionName":"initDB","level":"INFO","message":"Member table initialized.","timestamp":"2025-02-26 13:53:20"}
+{"functionName":"initDB","level":"INFO","message":"Membership table initialized.","timestamp":"2025-02-26 13:53:20"}
+{"functionName":"initDB","level":"INFO","message":"Collection table initialized.","timestamp":"2025-02-26 13:53:20"}
+{"functionName":"initDB","level":"INFO","message":"Category table initialized.","timestamp":"2025-02-26 13:53:20"}
+{"functionName":"initDB","level":"INFO","message":"Book table initialized.","timestamp":"2025-02-26 13:53:20"}
+{"functionName":"initDB","level":"INFO","message":"Issuance table initialized.","timestamp":"2025-02-26 13:53:20"}
+{"functionName":"initDB","level":"INFO","message":"Users table initialized.","timestamp":"2025-02-26 13:53:20"}
+{"functionName":"initDB","level":"INFO","message":"Database initialized successfully.","timestamp":"2025-02-26 13:53:20"}
+{"functionName":"serverStart","level":"INFO","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:53:20"}
+{"functionName":"database","level":"INFO","message":"Connected to Aiven PostgreSQL","timestamp":"2025-02-26 13:57:30"}
+{"functionName":"initDB","level":"INFO","message":"Member table initialized.","timestamp":"2025-02-26 13:57:30"}
+{"functionName":"initDB","level":"INFO","message":"Membership table initialized.","timestamp":"2025-02-26 13:57:31"}
+{"functionName":"initDB","level":"INFO","message":"Collection table initialized.","timestamp":"2025-02-26 13:57:31"}
+{"functionName":"initDB","level":"INFO","message":"Category table initialized.","timestamp":"2025-02-26 13:57:31"}
+{"functionName":"initDB","level":"INFO","message":"Book table initialized.","timestamp":"2025-02-26 13:57:31"}
+{"functionName":"initDB","level":"INFO","message":"Issuance table initialized.","timestamp":"2025-02-26 13:57:31"}
+{"functionName":"initDB","level":"INFO","message":"Users table initialized.","timestamp":"2025-02-26 13:57:31"}
+{"functionName":"initDB","level":"INFO","message":"Database initialized successfully.","timestamp":"2025-02-26 13:57:31"}
+{"functionName":"serverStart","level":"INFO","message":"Server is running on http://localhost:3000","timestamp":"2025-02-26 13:57:31"}

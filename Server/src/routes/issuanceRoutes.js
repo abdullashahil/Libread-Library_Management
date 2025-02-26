@@ -5,7 +5,10 @@ import { verifyToken } from "../middlewares/authMiddleware.js"
 const router = express.Router();
 
 // Apply verifyToken to all routes in this router
-router.use(verifyToken);
+router.use((req, res, next) => {
+    logMessage("info", "Request", `${req.method} ${req.originalUrl} - Incoming request`);
+    verifyToken(req, res, next);
+});
 
 router.get('/issuances', issuanceController.getIssuances);
 router.get('/issuances/:id', issuanceController.getIssuanceById);

@@ -1,6 +1,6 @@
 import pg from "pg";
 import dotenv from "dotenv";
-// import fs from "fs";
+import { logMessage } from "../logger.js";
 
 dotenv.config();
 
@@ -12,22 +12,25 @@ const db = new pg.Client({
     port: process.env.PG_PORT,
     ssl: {
         rejectUnauthorized: false,
-        // ca: process.env.PG_SSL_CA,
     },
 });
 
 db.connect()
-    .then(() => console.log("✅ Connected to Aiven PostgreSQL"))
+    .then(() => logMessage("info", "database", "Connected to Aiven PostgreSQL"))
     .catch((err) => {
-        console.error("❌ Database connection error:", err.stack);
+        logMessage("error", "database", `Database connection error: ${err.message}`);
         process.exit(1);
     });
 
 db.on("error", (err) => {
-    console.error("Unexpected error on idle client", err);
+    logMessage("error", "database", `Unexpected error on idle client: ${err.message}`);
     process.exit(-1);
 });
 
-export const query = (text, params) => db.query(text, params); 
-
-
+// Database query function
+export const query = (text, params) => {
+    return db.query(text, params).catch((err) => {
+        logMessage("error", "databaseQuery", `Query error: ${err.message}`);
+        throw err;
+    });
+};
