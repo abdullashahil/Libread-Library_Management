@@ -1,6 +1,7 @@
 import express from "express";
 import * as memberController from '../controllers/memberController.js'
 import { verifyToken } from "../middlewares/authMiddleware.js"
+import { logMessage } from "../logger.js";
 
 const router = express.Router();
 

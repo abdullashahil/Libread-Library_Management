@@ -1,6 +1,7 @@
 import express from "express";
 import * as issuanceController from '../controllers/issuanceController.js';
 import { verifyToken } from "../middlewares/authMiddleware.js"
+import { logMessage } from "../logger.js";
 
 const router = express.Router();
 
