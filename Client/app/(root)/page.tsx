@@ -68,7 +68,7 @@ function SignupForm() {
     e.preventDefault();
     setIsLoading(true); // Start loading
     try {
-      const res = await fetch("https://libread-server.vercel.app/users/signup", {
+      const res = await fetch("http://localhost:3000/users/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
@@ -144,7 +144,7 @@ function LoginForm() {
     e.preventDefault();
     setIsLoading(true); // Start loading
     try {
-      const res = await fetch("https://libread-server.vercel.app/users/login", {
+      const res = await fetch("http://localhost:3000/users/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),

@@ -73,7 +73,7 @@ export default function MembersList() {
       setLoading(true);
       const token = localStorage.getItem("token"); // Retrieve JWT from localStorage
 
-      const res = await fetch("https://libread-server.vercel.app/members", {
+      const res = await fetch("http://localhost:3000/members", {
         headers: {
           "Content-Type": "application/json",
           Authorization: token ? `Bearer ${token}` : "",
@@ -107,7 +107,7 @@ export default function MembersList() {
       setLoading(true);
       const token = localStorage.getItem("token"); // Retrieve JWT from localStorage
 
-      const res = await fetch(`https://libread-server.vercel.app/members?q=${search}`, {
+      const res = await fetch(`http://localhost:3000/members?q=${search}`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: token ? `Bearer ${token}` : "",

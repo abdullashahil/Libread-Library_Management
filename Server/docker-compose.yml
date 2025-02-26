@@ -1,0 +1,41 @@
+version: '3.9'
+
+services:
+  # PostgreSQL Service
+  postgres:
+    container_name: db_container
+    image: postgres:latest
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Shahil@postgres1155
+      POSTGRES_DB: library_mgmt
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  # Node.js API Service
+  api:
+    build: .
+    container_name: api_container
+    ports:
+      - "4000:3000"
+    environment:
+      PORT: 3000
+      PG_USER: postgres
+      PG_HOST: db_container
+      PG_DATABASE: library_mgmt
+      PG_PASSWORD: Shahil@postgres1155
+      PG_PORT: 5432
+      JWT_SECRET: "secretkeyis@secret123"
+      LOG_DIR: "/var/logs/library_app.log"
+      depends_on:
+        postgres
+
+    volumes:
+      - logs:/app/logs
+
+volumes:
+  db_data: {}
+  logs: {}

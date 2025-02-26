@@ -30,7 +30,9 @@ app.use("/users", userRoutes);
 
 // Basic Route
 app.get("/", (req, res) => {
-  res.send("Hello from the Express backend!");
+  res.send("Hello, Docker! Deployment Test Successful 🎉");
+  // res.send("Hello from the Express backend!");
+
   logMessage("info", "Root Route", "Root route accessed");
 });
 
