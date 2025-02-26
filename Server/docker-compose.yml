@@ -10,7 +10,7 @@ services:
       - "5432:5432"
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: Shahil@postgres1155
+      POSTGRES_PASSWORD: @postgres1155
       POSTGRES_DB: library_mgmt
     volumes:
       - db_data:/var/lib/postgresql/data
@@ -26,7 +26,7 @@ services:
       PG_USER: postgres
       PG_HOST: db_container
       PG_DATABASE: library_mgmt
-      PG_PASSWORD: Shahil@postgres1155
+      PG_PASSWORD: @postgres1155
       PG_PORT: 5432
       JWT_SECRET: "secretkeyis@secret123"
       LOG_DIR: "/var/logs/library_app.log"
