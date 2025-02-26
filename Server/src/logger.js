@@ -8,10 +8,10 @@ import { fileURLToPath } from "url";
 dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __dirname = path.dirname(__filename);
 
 // Log directory setup
-const logDirectory = process.env.LOG_DIR || path.join(__dirname, "..", "logs");
+const logDirectory = process.env.LOG_DIR || "/var/data";
 if (!fs.existsSync(logDirectory)) {
     fs.mkdirSync(logDirectory, { recursive: true });
 }
