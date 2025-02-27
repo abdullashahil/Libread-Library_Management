@@ -4,9 +4,12 @@ import { logMessage } from "../logger.js";
 
 dotenv.config();
 
+
 const db = new pg.Client({
     connectionString: process.env.DATABASE_URL,
-
+    ssl: {
+        rejectUnauthorized: false,
+    },
 });
 
 
