@@ -1,6 +1,7 @@
 import pg from "pg";
 import dotenv from "dotenv";
 import { logMessage } from "../logger.js";
+import fs from "fs"; 
 
 dotenv.config();
 
@@ -8,7 +9,7 @@ const db = new pg.Client({
     connectionString: process.env.DATABASE_URL,
     ssl: {
         rejectUnauthorized: true,
-        ca: fs.readFileSync('../../ca.pem').toString(),
+        ca:  fs.readFileSync('../../ca.pem').toString(),
     },
 });
 
