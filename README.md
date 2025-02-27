@@ -11,7 +11,7 @@ A simple library management system with CRUD operations and JWT-based user authe
 
 ### 🔗 [Website](https://libread-library-management.vercel.app/)
 
-### 🔗 [API link (JWT secured)](http://localhost:3000/)
+### 🔗 [API link (JWT secured)](https://libread-server.vercel.app/)
 
 
 ## Tech Stack
@@ -108,7 +108,7 @@ A simple library management system with CRUD operations and JWT-based user authe
 
 | **Create .env File** | Add database credentials & JWT secret (See below) |
 
-| **Start Server** | `npm run dev` (Runs on `http://localhost:3000`) |
+| **Start Server** | `npm run dev` (Runs on `https://libread-server.vercel.app`) |
 
   
 
