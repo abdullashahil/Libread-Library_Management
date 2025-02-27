@@ -8,7 +8,7 @@ dotenv.config();
 const db = new pg.Client({
     connectionString: process.env.DATABASE_URL,
     ssl: {
-        rejectUnauthorized: true,
+        rejectUnauthorized: false,
         ca: fs.readFileSync("./ca.pem", "utf8"),
     },
 });
