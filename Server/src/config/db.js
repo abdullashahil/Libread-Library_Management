@@ -9,9 +9,12 @@ const db = new pg.Client({
     connectionString: process.env.DATABASE_URL,
     ssl: {
         rejectUnauthorized: true,
-        ca:  fs.readFileSync('./ca.pem').toString(),
+        ca: fs.readFileSync("./ca.pem", "utf8"),
     },
 });
+
+export default db;
+
 
 db.connect()
     .then(() => logMessage("info", "database", "Connected to Aiven PostgreSQL"))
