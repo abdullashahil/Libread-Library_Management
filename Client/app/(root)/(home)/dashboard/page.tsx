@@ -53,7 +53,6 @@ export default function Dashboard() {
         }
 
         const data = await res.json();
-        console.log("Fetched Data:", data);
         setPendingReturns(data);
       } catch (err) {
         console.error("Error fetching pending returns:", err);
