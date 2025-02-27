@@ -5,11 +5,23 @@ import fs from "fs";
 
 dotenv.config();
 
+// const db = new pg.Client({
+//     connectionString: process.env.DATABASE_URL,
+//     ssl: {
+//         rejectUnauthorized: false,
+//         ca: fs.readFileSync("./ca.pem", "utf8"),
+//     },
+// });
+
 const db = new pg.Client({
-    connectionString: process.env.DATABASE_URL,
+    user: process.env.PG_USER,
+    host: process.env.PG_HOST,
+    database: process.env.PG_DATABASE,
+    password: process.env.PG_PASSWORD,
+    port: process.env.PG_PORT,
+    // ssl: false
     ssl: {
         rejectUnauthorized: false,
-        ca: fs.readFileSync("./ca.pem", "utf8"),
     },
 });
 
